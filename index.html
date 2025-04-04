@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #fdf6f2;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #fff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 50px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            background-color: #f8e8df;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero h1 {
+            font-size: 60px;
+            color: #333;
+        }
+        .hero p {
+            font-size: 25px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .hero .btn {
+            background-color: #d4a373;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        .hero img {
+            width: 40%;
+            border-radius: 10px;
+        }
+
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        .category-card {
+            width: 200px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .category-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Spring Collection */
+        .spring-collection {
+            text-align: center;
+            padding: 50px;
+        }
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            padding-top: 30px;
+        }
+        .collection-item {
+            width: 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .collection-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">TRYON360</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="user.html">Profile</a>
+            <a href="login.html">Login</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="pro1.jpg"> </a>
+            <a href="#"><img src="insta.jpg" </a>
+            <a href="#"><img src="face.jpg" </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Wear Confidence!</h1>
+            <p>"Try before you buy, from every angle"</p>
+            <a href="tryon.html"><img src="cam-removebg-preview.png"> </a>
+        </div>
+        <img src="8f.jpeg" alt="Fashion Model">
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <div class="category-card">
+            <img src="3.jpeg" alt="Casual Wear">
+            <h3>Casual Wear</h3>
+        </div>
+        <div class="category-card">
+            <img src="1m.jpeg" alt="Elegant Dresses">
+            <h3>Elegant Dresses</h3>
+        </div>
+        <div class="category-card">
+            <img src="2m.jpeg" alt="Seasonal Trends">
+            <h3>Seasonal Trends</h3>
+        </div>
+    </div>
+
+    <!-- Spring Collection -->
+    <div class="spring-collection">
+        <h2>Collection</h2>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src="4f.jpeg" alt="Outfit 1">
+                <h3>Lehnga</h3>
+            </div>
+            <div class="collection-item">
+                <img src="3m.jpeg" alt="Outfit 2">
+                <h3>Suit</h3>
+            </div>
+            <div class="collection-item">
+                <img src="5f.jpeg" alt="Outfit 3">
+                <h3>Elegant Dress</h3>
+            </div>
+            <div class="collection-item">
+                <img src="5m.jpeg" alt="Outfit 4">
+                <h3>Blazer Outfit</h3>
+            </div>
+            <div class="collection-item">
+                <img src="6f.jpeg" alt="Outfit 5">
+                <h3>Bodycon</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Try Your Elegant Fashion</h2>
+    </div>
+
+</body>
+</html>

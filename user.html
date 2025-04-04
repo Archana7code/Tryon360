@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script> -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const name = localStorage.getItem("username") || "Your Name";
+        const email = localStorage.getItem("email") || "youremail@example.com";
+
+        document.getElementById("user-name").textContent = name;
+        document.getElementById("user-email").textContent = email;
+
+        // Set initials for profile-image
+        const initials = name.trim().split(" ").map(word => word[0].toUpperCase()).join("").substring(0, 2);
+        document.querySelector(".profile-image").textContent = initials;
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .logo {
+            height: 30px;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .nav-item i {
+            font-size: 20px;
+        }
+
+        .active {
+            position: relative;
+            font-weight: bold;
+        }
+
+        .active::after {
+            content: "";
+            width: 30px;
+            height: 3px;
+            background: black;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menu-icon">☰</div>
+        <img src="logo.jpeg" class="logo" alt="Logo">
+        <div class="nav-icons">
+            <div class="nav-item">
+                <i class="fas fa-plus-square"></i>
+                <span>Add</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-heart"></i>
+                <a href="wishlist.html">Wishlist</a>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Bag</span>
+            </div>
+            <div class="nav-item active">
+                <i class="far fa-user"></i>
+                <span>Account</span>
+            </div>
+        </div>
+    </nav>
+   
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Add spacing between navbar and profile card */
+        .profile-container {
+            background-color: #f5f7fa; /* Light background */
+            padding: 20px;
+            border-bottom: 1px solid #ddd; /* Subtle separator */
+            margin-top: 20px; /* Space below the navbar */
+        }
+
+        .profile-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px; /* Increased width for better appearance */
+            margin: auto;
+            padding: 20px; /* Added padding for more spacing inside */
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 80px; /* Increased size */
+            height: 80px; /* Increased size */
+            border-radius: 50%;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px; /* Increased font size */
+            font-weight: bold;
+            margin-right: 20px; /* More space between image and text */
+        }
+
+        .text-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-info h3 {
+            font-size: 20px; /* Larger font */
+            margin-bottom: 5px;
+        }
+
+        .text-info p {
+            font-size: 16px; /* Slightly larger text */
+            color: gray;
+            margin-bottom: 3px;
+        }
+
+        .edit {
+            color: #007bff;
+            font-size: 16px; /* Bigger text */
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .edit:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-info">
+                <div class="profile-image">HY</div>
+                <div class="text-info">
+                    <h3 id="user-name">Your Name</h3>
+                    <p id="user-email">youremail@example.com</p>
+                    <p>99xxxxxxxx</p>
+                </div>
+            </div>
+            <a href="#" class="edit">Edit</a>
+        </div>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Menu</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa; /* Match website background */
+        }
+
+        /* Space between navbar, profile, and menu */
+        .menu-container {
+            width: 100%;
+            max-width: 900px; /* Fits the page width */
+            margin: 30px auto; /* Centered */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .menu-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            color: #007bff;
+            margin-right: 12px;
+        }
+
+        .menu-text {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .arrow {
+            font-size: 18px;
+            color: #555;
+        }
+
+    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Menu</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa; /* Matches website background */
+            padding: 20px; /* Adds space around elements */
+        }
+
+        /* Menu Container */
+        .menu-container {
+            width: 100%;
+            max-width: 900px; /* Fits well on the page */
+            margin: 30px auto; /* Centered */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        /* Individual Menu Item */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            font-size: 18px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        /* Adds spacing between features */
+        .menu-item:not(:last-child) {
+            margin-bottom: 10px; /* Space between items */
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item:hover {
+            background-color: #f1f1f1;
+            border-radius: 6px; /* Soft rounded edges */
+        }
+
+        /* Left-side Content */
+        .menu-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon {
+            font-size: 22px;
+            color: #007bff;
+            margin-right: 15px;
+        }
+
+        .menu-text {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .arrow {
+            font-size: 18px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Profile Menu Section -->
+    <div class="menu-container">
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-tshirt"></i>
+                <div class="menu-text"><a href="tryon.html">Virtual Try On</a></div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-shopping-cart"></i>
+                <div class="menu-text">My Cart</div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-heart"></i>
+                <div class="menu-text">Saved Items</div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-box"></i>
+                <div class="menu-text">Order History</div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-bell"></i>
+                <div class="menu-text">Notifications</div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-map-marker-alt"></i>
+                <div class="menu-text">Address & Settings</div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-credit-card"></i>
+                <div class="menu-text">Payment Methods</div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-left">
+                <i class="menu-icon fas fa-user-circle"></i>
+                <div class="menu-text">Profile Settings</div>
+            </div>
+            <div class="arrow">➜</div>
+        </div>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        /* Scrollable Container */
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 15px;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background: #eee;
+        }
+
+        /* Individual Card */
+        .card {
+            flex: 0 0 auto;
+            width: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: white;
+        }
+
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Card Text */
+        .card-text {
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Fashion Collection</h2>
+    
+    <!-- Scrollable Card Section -->
+    <div class="scroll-container">
+        <div class="card">
+            <img src= "6f.jpeg" alt="Model 1">
+            <div class="card-text">Casual Dress</div>
+        </div>
+
+       
+        <div class="card">
+            <img src="4f.jpeg" alt="Model 3">
+            <div class="card-text">Traditional Outfit</div>
+        </div>
+
+        <div class="card">
+            <img src="5m.jpeg" alt="Model 4">
+            <div class="card-text">Suit</div>
+        </div>
+
+        <div class="card">
+            <img src="1m.jpeg" alt="Model 5">
+            <div class="card-text">Traditional Fashion</div>
+        </div>
+    </div>
+
+</body>
+</html>
+<!-- comment out  -->
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .wishlist-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 1100px;
+        }
+
+        .wishlist-heading {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .wishlist-items {
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .wishlist-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            width: 230px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .wishlist-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .wishlist-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .wishlist-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .wishlist-item p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="wishlist-container">
+        <h1 class="wishlist-heading">My Wishlist</h1>
+        <div class="wishlist-items">
+            <div class="wishlist-item">
+                <img src="4f.jpeg" alt="Clothing 1" class="wishlist-image">
+                <p>lehnga</p>
+            </div>
+            <div class="wishlist-item">
+                <img src="3m.jpeg" alt="Clothing 2" class="wishlist-image">
+                <p>Suit</p>
+            </div>
+            <div class="wishlist-item">
+                <img src="6f.jpeg" alt="Clothing 3" class="wishlist-image">
+                <p>Bodycon</p>
+            </div>
+            <div class="wishlist-item">
+                <img src="5m.jpeg" alt="Clothing 4" class="wishlist-image">
+                <p>Suit</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
